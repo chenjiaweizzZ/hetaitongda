@@ -2,48 +2,48 @@
     <div class="contentA">
         <div class="section">
             <h1 class="title1">班级设置</h1>
-            <h4 class="title2">我们坚持聘请本科高校教师授课，并根据每位同学的情况和需求定制不同的学习计划和方案。</h4>
+            <h4 class="title2">我们坚持聘请高校教师授课，并根据每位同学的情况和需求定制不同的学习计划和方案。</h4>
         </div>
         <div class="card-group">
             <div class="card-client client1">
                 <div class="social-media">
-                    <div class="card-title1">HFOAJJFA</div>
-                    <div class="card-title2">冲刺班</div>
-                    <div class="card-title2">全日制半封闭集训营</div>
-                    <div>【2个月】</div>
-                    <div>公共英语+2门专业课</div>
-                    <div>本科高校教师授课、全程干货</div>
-                    <div>英语专八班主任24小时在线答疑</div>
-                    <div>外地学员协助安排住宿</div>
-                    <div>适合同学利用暑期查缺补漏、强化巩固，精准掌握考试题型、重难点解析，真题模拟，应试技巧等，集训提升快，弯道超车。</div>
+                    <div class="card-title1">精品全程班</div>
+                    <div class="card-title2">语文，数学，英语，计算机</div>
+                    <div class="card-title2">基础+强化+冲刺</div>
+                    <div class="card-title2">历年真题分析</div>
+                    <div class="card-title2">强化核心提分</div>
+                    <div class="card-title2">冲刺模拟考演</div>
+                    <div class="card-title2">全程教辅资料</div>
+                    <div class="card-title2">志愿填报指导</div>
+                    <div class="card-title2">寒暑假集训强化</div>
                     <button class="card-btn">立即定制报考计划</button>
                 </div>
             </div>
             <div class="card-client client2">
                 <div class="social-media">
-                    <div class="card-title1">HFOAJJFA</div>
-                    <div class="card-title2">冲刺班</div>
-                    <div class="card-title2">全日制半封闭集训营</div>
-                    <div>【2个月】</div>
-                    <div>公共英语+2门专业课</div>
-                    <div>本科高校教师授课、全程干货</div>
-                    <div>英语专八班主任24小时在线答疑</div>
-                    <div>外地学员协助安排住宿</div>
-                    <div>适合同学利用暑期查缺补漏、强化巩固，精准掌握考试题型、重难点解析，真题模拟，应试技巧等，集训提升快，弯道超车。</div>
+                    <div class="card-title1">VIP保过班</div>
+                    <div class="card-title2">语文，数学，英语，计算机</div>
+                    <div class="card-title2">历年真题分析  强化核心提分  </div>
+                    <div class="card-title2">冲刺模拟考演  全程教辅资料 </div>
+                    <div class="card-title2">志愿填报指导 大二大三集训</div>
+                    <div class="card-title2">封闭集训 一对一老师全程跟进</div>
+                    <div class="card-title2">考前押题 私人定制学习计划</div>
+                    <div class="card-title2">24H在线答疑 考前一对一辅导</div>
+                    <div class="card-title2">VIP增值服务</div>
                     <button class="card-btn">立即定制报考计划</button>
                 </div>
             </div>
             <div class="card-client client3">
                 <div class="social-media">
-                    <div class="card-title1">HFOAJJFA</div>
-                    <div class="card-title2">冲刺班</div>
-                    <div class="card-title2">全日制半封闭集训营</div>
-                    <div>【2个月】</div>
-                    <div>公共英语+2门专业课</div>
-                    <div>本科高校教师授课、全程干货</div>
-                    <div>英语专八班主任24小时在线答疑</div>
-                    <div>外地学员协助安排住宿</div>
-                    <div>适合同学利用暑期查缺补漏、强化巩固，精准掌握考试题型、重难点解析，真题模拟，应试技巧等，集训提升快，弯道超车。</div>
+                    <div class="card-title1">强化班</div>
+                    <div class="card-title2">语文，数学，英语，计算机</div>
+                    <div class="card-title2">基础+强化+冲刺</div>
+                    <div class="card-title2">强化核心提分</div>
+                    <div class="card-title2">冲刺模拟考演</div>
+                    <div class="card-title2">寒假集训营</div>
+                    <div class="card-title2">复习计划指导</div>
+                    <div class="card-title2"> &nbsp; </div>
+                    <div class="card-title2"> &nbsp; </div>
                     <button class="card-btn">立即定制报考计划</button>
                 </div>
             </div>
@@ -62,7 +62,20 @@ export default {
 </script>
 <style scoped>
 .contentA {
-    margin-top: 100px;
+    margin-top: 110px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title2 {
+    font-size: 20px;
+    margin: 5px 0px;
+}
+
+.card-title1 {
+    font-size: 42px;
 }
 .home-wrapper {
     width: 100%;
@@ -81,6 +94,8 @@ export default {
 
 .section {
     text-align: center;
+    /* margin-left: 80px;
+    margin-right: 80px; */
 }
 
 .title1 {
@@ -98,6 +113,7 @@ export default {
     display: flex;
     justify-content: space-around;
     flex: 0 1 30%;
+    width: 90vw;
 }
 
 .card-client {
@@ -108,6 +124,7 @@ export default {
     padding-right: 20px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 20px;
     /* border: 4px solid #7cdacc; */
     box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
     border-radius: 10px;
@@ -154,6 +171,7 @@ export default {
 }
 
 .card-btn {
+    margin-top: 20px;
     position: relative;
     font-size: 17px;
     text-transform: uppercase;

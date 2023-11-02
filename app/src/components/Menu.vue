@@ -6,26 +6,26 @@
             </div>
             <div class="menu-group">
                 <span class="menu-item"><i class="el-icon-discount"></i>首页</span>
-                <span class="menu-item"><i class="el-icon-office-building"></i>课程</span>
+                <!-- <span class="menu-item"><i class="el-icon-office-building"></i>课程</span> -->
                 <span class="menu-item"><i class="el-icon-school"></i>院校信息</span>
-                <span class="menu-item"><i class="el-icon-coordinate"></i>招生简章</span>
+                <!-- <span class="menu-item"><i class="el-icon-coordinate"></i>招生简章</span>
                 <span class="menu-item"><i class="el-icon-office-building"></i>院校查询</span>
-                <span class="menu-item"><i class="el-icon-folder-checked"></i>招考信息</span>
+                <span class="menu-item"><i class="el-icon-folder-checked"></i>招考信息</span> -->
                 <span class="menu-item"><i class="el-icon-position"></i>关于我们</span>
-                <span class="menu-item"><el-button type="danger" plain>联系我们</el-button></span>
+                <!-- <span class="menu-item"><el-button type="danger" plain>联系我们</el-button></span> -->
                 <el-dropdown trigger="click">
                     <span class="phoneMenu">
                         <i class="el-icon-s-grid"></i>
                     </span>
                     <el-dropdown-menu slot="dropdown">
                         <el-dropdown-item icon="el-icon-plus">首页</el-dropdown-item>
-                        <el-dropdown-item icon="el-icon-circle-plus">课程</el-dropdown-item>
+                        <!-- <el-dropdown-item icon="el-icon-circle-plus">课程</el-dropdown-item> -->
                         <el-dropdown-item icon="el-icon-circle-plus-outline">院校信息</el-dropdown-item>
-                        <el-dropdown-item icon="el-icon-check">招生简章</el-dropdown-item>
+                        <!-- <el-dropdown-item icon="el-icon-check">招生简章</el-dropdown-item>
                         <el-dropdown-item icon="el-icon-circle-check">院校查询</el-dropdown-item>
-                        <el-dropdown-item icon="el-icon-circle-check">招考信息</el-dropdown-item>
+                        <el-dropdown-item icon="el-icon-circle-check">招考信息</el-dropdown-item> -->
                         <el-dropdown-item icon="el-icon-circle-check">关于我们</el-dropdown-item>
-                        <el-dropdown-item icon="el-icon-circle-check">联系我们</el-dropdown-item>
+                        <!-- <el-dropdown-item icon="el-icon-circle-check">联系我们</el-dropdown-item> -->
                     </el-dropdown-menu>
                 </el-dropdown>
             </div>
