@@ -7,6 +7,7 @@
         <conten-diff-a/>
         <!-- <contact/> -->
         <content-AA/>
+        <c-footer></c-footer>
     </div>
 </template>
   
@@ -17,6 +18,7 @@ import contentA from './components/contentA.vue';
 import contenDiffA from './components/contenDiffA.vue';
 import contentSpecial from './components/contentSpecial.vue';
 import ContentAA from './components/contentAA.vue';
+import cFooter from '@/components/cFooter.vue';
 // import contact from './components/contact.vue';
 export default {
     name: 'Home',
@@ -25,6 +27,7 @@ export default {
         contenDiffA,
         contentSpecial,
         ContentAA,
+        cFooter,
         // contact
         // contentB,
         // contentC
