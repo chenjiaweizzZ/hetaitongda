@@ -5,7 +5,8 @@
         <!-- <content-c/> -->
         <content-special/>
         <conten-diff-a/>
-        <contact/>
+        <!-- <contact/> -->
+        <content-AA/>
     </div>
 </template>
   
@@ -15,14 +16,16 @@ import contentA from './components/contentA.vue';
 // import contentC from './components/contentC.vue';
 import contenDiffA from './components/contenDiffA.vue';
 import contentSpecial from './components/contentSpecial.vue';
-import contact from './components/contact.vue';
+import ContentAA from './components/contentAA.vue';
+// import contact from './components/contact.vue';
 export default {
     name: 'Home',
     components: { 
         contentA,
         contenDiffA,
         contentSpecial,
-        contact
+        ContentAA,
+        // contact
         // contentB,
         // contentC
      }, 

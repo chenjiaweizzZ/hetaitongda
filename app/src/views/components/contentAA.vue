@@ -1,50 +1,51 @@
 <template>
     <div class="contentA">
         <div class="section">
-            <h1 class="title1">班级设置</h1>
-            <h4 class="title2">我们坚持聘请高校教师授课，并根据每位同学的情况和需求定制不同的学习计划和方案。</h4>
+            <h1 class="title1">乘风破浪会有时</h1>
+            <h1 class="title1">直挂云帆济沧海</h1>
+            <h4 >菏海通大培训中心，是一所专注于山东三年制大专专升本的培训学校，是山东省专升本教育行业中发展快、通过率高的行业领跑者，有着丰富的办学经验，已助力上千名学子考上理想的本科院校</h4>
         </div>
         <div class="card-group">
             <div class="card-client client1">
                 <div class="social-media">
-                    <div class="card-title1">精品全程班</div>
-                    <div class="card-title2">语文，数学，英语，计算机</div>
-                    <div class="card-title2">基础+强化+冲刺</div>
-                    <div class="card-title2">历年真题分析</div>
-                    <div class="card-title2">强化核心提分</div>
-                    <div class="card-title2">冲刺模拟考演</div>
-                    <div class="card-title2">全程教辅资料</div>
-                    <div class="card-title2">志愿填报指导</div>
-                    <div class="card-title2">寒暑假集训强化</div>
-                    <button class="card-btn" @click="toPage('AboutUs')">立即定制报考计划</button>
+                    <div class="card-title1">菏泽</div>
+                    <div class="card-title2"> &nbsp; </div>
+                    <div class="card-title2">菏泽校区</div>
+                    <div class="card-title2">手机/微信</div>
+                    <div class="card-title2">18552368052</div>
+                    <button class="card-btn" data-clipboard-text="18552368052">复制号码</button>
                 </div>
             </div>
             <div class="card-client client2">
                 <div class="social-media">
-                    <div class="card-title1">VIP保过班</div>
-                    <div class="card-title2">语文，数学，英语，计算机</div>
-                    <div class="card-title2">历年真题分析  强化核心提分  </div>
-                    <div class="card-title2">冲刺模拟考演  全程教辅资料 </div>
-                    <div class="card-title2">志愿填报指导 大二大三集训</div>
-                    <div class="card-title2">封闭集训 一对一老师全程跟进</div>
-                    <div class="card-title2">考前押题 私人定制学习计划</div>
-                    <div class="card-title2">24H在线答疑 考前一对一辅导</div>
-                    <div class="card-title2">VIP增值服务</div>
-                    <button class="card-btn" @click="toPage('AboutUs')">立即定制报考计划</button>
+                    <div class="social-media">
+                        <div class="card-title1">菏泽</div>
+                        <div class="card-title2"> &nbsp; </div>
+                        <div class="card-title2">单县校区</div>
+                        <div class="card-title2">手机/微信</div>
+                        <div class="card-title2">15554029003</div>
+                        <button class="card-btn" data-clipboard-text="18552368052">复制号码</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-client client4">
+                <div class="social-media">
+                    <div class="card-title1">济宁</div>
+                    <div class="card-title2"> &nbsp; </div>
+                    <div class="card-title2">济宁校区</div>
+                    <div class="card-title2">手机/微信</div>
+                    <div class="card-title2">18552368052</div>
+                    <button class="card-btn" data-clipboard-text="18552368052">复制号码</button>
                 </div>
             </div>
             <div class="card-client client3">
                 <div class="social-media">
-                    <div class="card-title1">强化班</div>
-                    <div class="card-title2">语文，数学，英语，计算机</div>
-                    <div class="card-title2">基础+强化+冲刺</div>
-                    <div class="card-title2">强化核心提分</div>
-                    <div class="card-title2">冲刺模拟考演</div>
-                    <div class="card-title2">寒假集训营</div>
-                    <div class="card-title2">复习计划指导</div>
+                    <div class="card-title1">临沂</div>
                     <div class="card-title2"> &nbsp; </div>
-                    <div class="card-title2"> &nbsp; </div>
-                    <button class="card-btn" @click="toPage('AboutUs')">立即定制报考计划</button>
+                    <div class="card-title2">临沂校区</div>
+                    <div class="card-title2">手机/微信</div>
+                    <div class="card-title2">15554029003</div>
+                    <button class="card-btn" data-clipboard-text="18552368052">复制号码</button>
                 </div>
             </div>
         </div>
@@ -52,24 +53,46 @@
 </template>
   
 <script>
+import { Toast } from 'vant';
+import Clipboard from 'clipboard'
 export default {
-    name: 'HelloWorld',
+    name: 'contentAA',
     data() {
         return {
         }
     },
-    methods: {
-        toPage(name) {
-            this.$router.push({
-                name
-            })
-        }
-    }
+    mounted() {
+        const clipboard = new Clipboard('.copy-button')
+        clipboard.on('success', e => {
+            console.log('复制成功', e)
+            Toast({
+                message: '复制成功',
+                icon: 'like-o',
+            });
+            // 释放内存
+            clipboard.destroy()
+        })
+        clipboard.on('error', e => {
+            console.log('不复制成功', e)
+            // 不支持复制
+            Toast({
+                message: '手机权限不支持复制功能',
+                icon: 'like-o',
+            });
+            // 释放内存
+            clipboard.destroy()
+        })
+    },
+
 }
 </script>
 <style scoped>
+.section {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 .contentA {
-    margin-top: 110px;
+    margin-top: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -84,6 +107,7 @@ export default {
 .card-title1 {
     font-size: 42px;
 }
+
 .home-wrapper {
     width: 100%;
     display: flex;
@@ -151,6 +175,10 @@ export default {
 
 .client3 {
     background: #6ec7e0;
+}
+
+.client4 {
+    background: #ffc0cb;
 }
 
 .card-client:hover {
