@@ -1,5 +1,6 @@
 <template>
     <div class="home-wrapper">
+        <content-swiper/>
         <content-A/>
         <!-- <content-B/> -->
         <!-- <content-c/> -->
@@ -19,6 +20,7 @@ import contenDiffA from './components/contenDiffA.vue';
 import contentSpecial from './components/contentSpecial.vue';
 import ContentAA from './components/contentAA.vue';
 import cFooter from '@/components/cFooter.vue';
+import contentSwiper from './components/contentSwiper.vue';
 // import contact from './components/contact.vue';
 export default {
     name: 'Home',
@@ -28,6 +30,7 @@ export default {
         contentSpecial,
         ContentAA,
         cFooter,
+        contentSwiper,
         // contact
         // contentB,
         // contentC

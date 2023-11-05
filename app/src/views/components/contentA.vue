@@ -69,7 +69,7 @@ export default {
 </script>
 <style scoped>
 .contentA {
-    margin-top: 110px;
+    margin-top: 30px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -114,6 +114,8 @@ export default {
     font-size: 1.6em;
     font-weight: bold;
     font-family: Montserrat, Helvetica, Arial, sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .card-group {

@@ -3,7 +3,7 @@
         <div class="section">
             <h1 class="title1">乘风破浪会有时</h1>
             <h1 class="title1">直挂云帆济沧海</h1>
-            <h4 >菏海通大培训中心，是一所专注于山东三年制大专专升本的培训学校，是山东省专升本教育行业中发展快、通过率高的行业领跑者，有着丰富的办学经验，已助力上千名学子考上理想的本科院校</h4>
+            <h4>菏海通大培训中心，是一所专注于山东三年制大专专升本的培训学校，是山东省专升本教育行业中发展快、通过率高的行业领跑者，有着丰富的办学经验，已助力上千名学子考上理想的本科院校</h4>
         </div>
         <div class="card-group">
             <div class="card-client client1">
@@ -13,7 +13,7 @@
                     <div class="card-title2">菏泽校区</div>
                     <div class="card-title2">手机/微信</div>
                     <div class="card-title2">18552368052</div>
-                    <button class="card-btn" data-clipboard-text="18552368052">复制号码</button>
+                    <button class="card-btn" data-clipboard-text="18552368052" @click="getCopy()">复制号码</button>
                 </div>
             </div>
             <div class="card-client client2">
@@ -24,7 +24,7 @@
                         <div class="card-title2">单县校区</div>
                         <div class="card-title2">手机/微信</div>
                         <div class="card-title2">15554029003</div>
-                        <button class="card-btn" data-clipboard-text="18552368052">复制号码</button>
+                        <button class="card-btn" data-clipboard-text="15554029003" @click="getCopy()">复制号码</button>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                     <div class="card-title2">济宁校区</div>
                     <div class="card-title2">手机/微信</div>
                     <div class="card-title2">18552368052</div>
-                    <button class="card-btn" data-clipboard-text="18552368052">复制号码</button>
+                    <button class="card-btn" data-clipboard-text="18552368052" @click="getCopy()">复制号码</button>
                 </div>
             </div>
             <div class="card-client client3">
@@ -45,7 +45,7 @@
                     <div class="card-title2">临沂校区</div>
                     <div class="card-title2">手机/微信</div>
                     <div class="card-title2">15554029003</div>
-                    <button class="card-btn" data-clipboard-text="18552368052">复制号码</button>
+                    <button class="card-btn" data-clipboard-text="15554029003" @click="getCopy()">复制号码</button>
                 </div>
             </div>
         </div>
@@ -54,7 +54,6 @@
   
 <script>
 import { Toast } from 'vant';
-import Clipboard from 'clipboard'
 export default {
     name: 'contentAA',
     data() {
@@ -62,28 +61,25 @@ export default {
         }
     },
     mounted() {
-        const clipboard = new Clipboard('.copy-button')
-        clipboard.on('success', e => {
-            console.log('复制成功', e)
-            Toast({
-                message: '复制成功',
-                icon: 'like-o',
-            });
-            // 释放内存
-            clipboard.destroy()
-        })
-        clipboard.on('error', e => {
-            console.log('不复制成功', e)
-            // 不支持复制
-            Toast({
-                message: '手机权限不支持复制功能',
-                icon: 'like-o',
-            });
-            // 释放内存
-            clipboard.destroy()
-        })
-    },
 
+    },
+    methods: {
+
+        getCopy() {
+            //使用main.js内注册的vue原型，用class绑定将数据存储到clipboard中
+            let clipboard = new this.clipboard('.card-btn');
+            clipboard.on('success', e => {
+                Toast.success('复制成功');
+                //清除选中
+                e.clearSelection();
+                //释放内存，以防重复复制
+                clipboard.destroy();
+            });
+            clipboard.on('error', () => {
+                Toast.fail('复制失败，请手动选择复制');
+            });
+        }
+    }
 }
 </script>
 <style scoped>
@@ -91,6 +87,7 @@ export default {
     padding-left: 20px;
     padding-right: 20px;
 }
+
 .contentA {
     margin-top: 20px;
     width: 100%;
