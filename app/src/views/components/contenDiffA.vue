@@ -125,7 +125,7 @@ export default {
 }
 
 .bg2 {
-    background: black;
+    background: #151f20;
     color: white;
 }
 

@@ -13,24 +13,28 @@
                 <span class="menu-item"><i class="el-icon-folder-checked"></i>招考信息</span> -->
                 <span class="menu-item"><i class="el-icon-position"></i>关于我们</span>
                 <!-- <span class="menu-item"><el-button type="danger" plain>联系我们</el-button></span> -->
-                <el-dropdown trigger="click">
-                    <span class="phoneMenu">
-                        <i class="el-icon-s-grid"></i>
-                    </span>
-                    <el-dropdown-menu slot="dropdown">
-                        <el-dropdown-item icon="el-icon-plus">首页</el-dropdown-item>
-                        <!-- <el-dropdown-item icon="el-icon-circle-plus">课程</el-dropdown-item> -->
-                        <el-dropdown-item icon="el-icon-circle-plus-outline">院校信息</el-dropdown-item>
-                        <!-- <el-dropdown-item icon="el-icon-check">招生简章</el-dropdown-item>
-                        <el-dropdown-item icon="el-icon-circle-check">院校查询</el-dropdown-item>
-                        <el-dropdown-item icon="el-icon-circle-check">招考信息</el-dropdown-item> -->
-                        <el-dropdown-item icon="el-icon-circle-check">关于我们</el-dropdown-item>
-                        <!-- <el-dropdown-item icon="el-icon-circle-check">联系我们</el-dropdown-item> -->
-                    </el-dropdown-menu>
-                </el-dropdown>
+                <van-icon name="apps-o" size="40" class="phoneMenu" @click="popShow"/>
             </div>
         </div>
-
+        <van-popup v-model="show" position="right" style="width: 55%; height: 100%;">
+            <div class="phoneMenu-list">
+                <div class="phoneMenu-list-item">
+                    <img src="@/assets/images/logo_iphone.jpg"/>
+                </div>
+                <div class="phoneMenu-list-item phoneMenu-list-item2">
+                    <van-icon name="home-o" size="25px"/>
+                    <span class="phoneMenu-list-item-fnt">首页</span>
+                </div>
+                <div class="phoneMenu-list-item phoneMenu-list-item2">
+                    <van-icon name="hotel-o" size="25px"/>
+                    <span class="phoneMenu-list-item-fnt">院校信息</span>
+                </div>
+                <div class="phoneMenu-list-item phoneMenu-list-item2">
+                    <van-icon name="guide-o" size="25px"/>
+                    <span class="phoneMenu-list-item-fnt">关于我们</span>
+                </div>
+            </div>
+        </van-popup>
     </div>
 </template>
   
@@ -39,6 +43,12 @@ export default {
     name: 'Menu',
     data() {
         return {
+            show: false,
+        }
+    },
+    methods: {
+        popShow() {
+            this.show = true;
         }
     }
 }
@@ -96,6 +106,30 @@ export default {
     padding: 10px 15px;
 }
 
+.phoneMenu-list {
+}
+
+.phoneMenu-list-item {
+    display: flex;
+}
+
+.phoneMenu-list-item2 {
+    margin-left: 20px;
+    height: 40px;
+    align-items: center;
+}
+
+.phoneMenu-list-item-fnt {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.phoneMenu-list img {
+    height: 150px;
+    width: 200px;
+}
+
 @media (max-width: 1200px) {
     .menu-item {
         display: none;
@@ -103,6 +137,7 @@ export default {
 
     .phoneMenu {
         display: block;
+        margin-right: 30px;
     }
 
     .menu-list {
@@ -111,8 +146,3 @@ export default {
 }
 </style>
 
-<style>
-.menu .phoneMenu  {
-    font-size: 30px;
-}
-</style>
