@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Menu></Menu>
+    <Menu v-if="isMenuShow"></Menu>
     <router-view />
   </div>
 </template>
@@ -11,7 +11,26 @@ export default {
   name: 'App',
   components: {
     Menu
-  }
+  },
+  data() {
+    return {
+      isMenuShow: false
+    }
+  },
+  created() {
+    
+  },
+  watch: {
+    $route(to, from) {
+      if (to.path === '/' || to.path === '/home' || to.path === '/schools' || to.path === '/aboutus') {
+        this.isMenuShow = true
+      } else {
+        this.isMenuShow = false
+      }
+    }
+
+  },
+
 }
 </script>
 

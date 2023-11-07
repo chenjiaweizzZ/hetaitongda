@@ -14,18 +14,33 @@ export default new Router({
     },
     {
       path: '/home',
-      name: 'Home',
+      name: 'home',
       component: () => import('@/views/Home.vue')
     },
     {
       path: '/schools',
-      name: 'School',
+      name: 'school',
       component: () => import('@/views/School.vue')
     },
     {
       path: '/aboutus',
-      name: 'AboutUs',
+      name: 'aboutUs',
       component: () => import('@/views/AboutUs.vue')
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: () => import('@/views/Admin.vue')
+    },
+    {
+      path: '/logina',
+      name: 'logina',
+      component: () => import('@/views/AdminLogin.vue')
+    },
+    {
+      path: '/homea',
+      name: 'homea',
+      component: () => import('@/views/HomeAdmin.vue')
     },
   ]
 })

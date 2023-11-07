@@ -16,7 +16,7 @@
                     <div class="card-title2">全程教辅资料</div>
                     <div class="card-title2">志愿填报指导</div>
                     <div class="card-title2">寒暑假集训强化</div>
-                    <button class="card-btn" @click="toPage('AboutUs')">立即定制报考计划</button>
+                    <button class="card-btn" @click="toPage('aboutUs')">立即定制报考计划</button>
                 </div>
             </div>
             <div class="card-client client2">
@@ -30,7 +30,7 @@
                     <div class="card-title2">考前押题 私人定制学习计划</div>
                     <div class="card-title2">24H在线答疑 考前一对一辅导</div>
                     <div class="card-title2">VIP增值服务</div>
-                    <button class="card-btn" @click="toPage('AboutUs')">立即定制报考计划</button>
+                    <button class="card-btn" @click="toPage('aboutUs')">立即定制报考计划</button>
                 </div>
             </div>
             <div class="card-client client3">
@@ -44,7 +44,7 @@
                     <div class="card-title2">复习计划指导</div>
                     <div class="card-title2"> &nbsp; </div>
                     <div class="card-title2"> &nbsp; </div>
-                    <button class="card-btn" @click="toPage('AboutUs')">立即定制报考计划</button>
+                    <button class="card-btn" @click="toPage('aboutUs')">立即定制报考计划</button>
                 </div>
             </div>
         </div>
