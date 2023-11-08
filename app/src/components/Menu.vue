@@ -112,7 +112,7 @@ export default {
     padding: 10px 15px;
 }
 
-.phoneMenu-list {}
+
 
 .phoneMenu-list-item {
     display: flex;
