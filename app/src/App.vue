@@ -18,10 +18,10 @@ export default {
     }
   },
   created() {
-    
+
   },
   watch: {
-    $route(to, from) {
+    $route(to) {
       if (to.path === '/' || to.path === '/home' || to.path === '/schools' || to.path === '/aboutus') {
         this.isMenuShow = true
       } else {
@@ -44,3 +44,4 @@ export default {
   overflow-y: scroll;
 }
 </style>
+

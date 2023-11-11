@@ -40,7 +40,7 @@
   
 <script>
 export default {
-    name: 'Menu',
+    name: 'MenuU',
     data() {
         return {
             show: false,

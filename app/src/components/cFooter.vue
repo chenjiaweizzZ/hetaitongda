@@ -10,7 +10,7 @@
   
 <script>
 export default {
-  name: 'cfooter',
+  name: 'cFooter',
   data() {
     return {
     }

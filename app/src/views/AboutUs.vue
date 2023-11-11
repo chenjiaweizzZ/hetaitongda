@@ -8,7 +8,7 @@
 import contentAA from './components/contentAA.vue'
   export default {
   components: { contentAA },
-    name: 'schoold',
+    name: 'AboutUs',
     data () {
       return {
       }

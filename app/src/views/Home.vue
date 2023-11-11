@@ -22,8 +22,9 @@ import ContentAA from './components/contentAA.vue';
 import cFooter from '@/components/cFooter.vue';
 import contentSwiper from './components/contentSwiper.vue';
 // import contact from './components/contact.vue';
+// import request from '@/request'
 export default {
-    name: 'Home',
+    name: 'HomeE',
     components: { 
         contentA,
         contenDiffA,

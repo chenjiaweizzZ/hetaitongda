@@ -4,7 +4,7 @@
   
   <script>
   export default {
-    name: 'admin',
+    name: 'adminN',
     created() {
         this.$router.push({
             name: 'logina'
