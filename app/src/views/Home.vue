@@ -23,7 +23,7 @@ import cFooter from '@/components/cFooter.vue';
 import contentSwiper from './components/contentSwiper.vue';
 // import contact from './components/contact.vue';
 // import request from '@/request'
-import { login } from '@/service/user'
+
 export default {
     name: 'HomeE',
     components: { 
@@ -37,11 +37,7 @@ export default {
         // contentB,
         // contentC
      }, 
-     created() {
-        login({name: 'jern chan11', password: '123456'}).then(res => {
-            console.log(res)
-        })
-     },
+     
     data() {
         return {
         }
