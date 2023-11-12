@@ -14,7 +14,7 @@
                 <div class="input-container">
                     <input type="password" placeholder="请输入密码" v-model="password">
                 </div>
-                <button  class="submit" @click="logina()">
+                <button class="submit" @click="logina()">
                     登录
                 </button>
 
@@ -24,47 +24,112 @@
                 </p>
             </div>
         </div>
-
+        <van-dialog v-model="show" confirm-button-color="#056DE8" confirmButtonText="取消" @confirm="cancel">
+            <div class="form">
+                <p class="form-title">注册</p>
+                <div class="input-container">
+                    <input type="email" placeholder="请输入账号" v-model="username2" class="input2">
+                    <span>
+                    </span>
+                </div>
+                <div class="input-container">
+                    <input type="password" placeholder="请输入密码" v-model="password2" class="input2">
+                </div>
+                <button class="submit" @click="registerSub()">
+                    注册
+                </button>
+            </div>
+        </van-dialog>
     </div>
 </template>
   
 <script>
-import { Dialog } from 'vant';
+// import { Dialog } from 'vant';
+import { Toast } from 'vant';
+import { login, register } from '@/service/user'
+import md5 from 'md5'
 export default {
     name: 'adminLogin',
     data() {
         return {
             username: '',
-            password: ''
+            password: '',
+            username2: '',
+            password2: '',
+            show: false
         }
     },
+    created() {
+        // login({ name: 'jern chan11', password: '123456' }).then(res => {
+        //     console.log(res)
+        // })
+
+    },
     methods: {
+        cancel() {
+            this.password2 = '',
+                this.username2 = ''
+        },
         logina() {
-            this.$router.push({
-                name: 'homea'
-            })
-        },  
+
+            if (this.username && this.password) {
+                login({ name: this.username, password: md5(this.password) }).then(res => {
+                    if (res.code == 0) {
+                        localStorage.setItem("token", res.data.token);
+                        localStorage.setItem("username", res.data.username);
+                        this.$router.push({
+                            name: 'homea'
+                        })
+                        Toast('登录成功');
+                    }else {
+                        Toast('账号密码错误');
+                    }
+                })
+            }
+
+        },
         register() {
-            Dialog.alert({
-                title: '注册',
-                message: '请联系管理员进行注册',
-                confirmButtonColor: '#056DE8'
-            }).then(() => {
-                // on close
-            });
+            // Dialog.alert({
+            //     title: '注册',
+            //     message: '请联系管理员进行注册',
+            //     confirmButtonColor: '#056DE8'
+            // }).then(() => {
+            //     // on close
+            // });
+            this.show = true
+        },
+        registerSub() {
+            if (this.username2 && this.password2) {
+                register({ name: this.username2, password: md5(this.password2) }).then(res => {
+                    Toast(res.message);
+                    Toast(res.message);
+                    this.username2 = ''
+                    this.password2 = ''
+                    this.show = false
+                })
+            } else {
+                Toast('请填写完整信息');
+            }
+
         }
     }
 }
 </script>
 <style scoped>
+.input2 {
+    width: 230px !important
+}
+
 .menu-logo img {
     width: 200px;
     height: 80px;
 }
+
 .menu-logo {
     display: flex;
     justify-content: center;
 }
+
 .admin-login {
     /* margin-top: 90px; */
 }

@@ -1,11 +1,12 @@
 import originAxios from 'axios'
 
-export  function request(option) {
+export default function request(option) {
     return new Promise((resolve, reject) => {
         // 1.创建axios的实例
         const instance = originAxios.create({
-            baseURL: 'http://8.130.71.244:8000',
-            timeout: 5000
+            // baseURL: 'http://8.130.71.244:8000',
+            baseURL: 'http://localhost:8000',
+            timeout: 10000
         });
 
         // 配置请求和响应拦截
@@ -20,6 +21,7 @@ export  function request(option) {
             // console.log(config);
 
             // 4.等等
+            
             return config
         }, err => {
             // console.log('来到了request拦截failure中');
