@@ -2,7 +2,7 @@
   <div class="c-footer">
     <img src="@/assets/images/logo_png.png" class="footer-img" />
     <div class="ban">
-      <div>苏ICP备:2020056290号</div>
+      <div>鲁ICP备2023040145号</div>
       <div>菏海通大教育</div>
     </div>
   </div>
