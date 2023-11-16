@@ -1,13 +1,13 @@
 <template>
     <div class="home-wrapper">
-        <content-swiper/>
-        <content-A/>
+        <content-swiper />
+        <content-A />
         <!-- <content-B/> -->
         <!-- <content-c/> -->
-        <content-special/>
-        <conten-diff-a/>
+        <content-special />
+        <conten-diff-a />
         <!-- <contact/> -->
-        <content-AA/>
+        <content-AA />
         <c-footer></c-footer>
     </div>
 </template>
@@ -26,7 +26,7 @@ import contentSwiper from './components/contentSwiper.vue';
 
 export default {
     name: 'HomeE',
-    components: { 
+    components: {
         contentA,
         contenDiffA,
         contentSpecial,
@@ -36,12 +36,12 @@ export default {
         // contact
         // contentB,
         // contentC
-     }, 
-     
+    },
     data() {
         return {
         }
-    }
+    },
+    
 }
 </script>
 

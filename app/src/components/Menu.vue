@@ -71,6 +71,8 @@ export default {
     z-index: 999;
 }
 
+
+
 .menu-list {
     display: flex;
     align-items: center;
