@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Menu v-if="isMenuShow" :class="{ 'header--hidden': headerHidden,'header--show': !headerHidden }"></Menu>
+    <Menu v-if="isMenuShow" :class="{ 'header--hidden': headerHidden, 'header--show': !headerHidden }"></Menu>
     <!-- <div @click="test()" class="ttt">123</div> -->
     <router-view />
   </div>
@@ -22,18 +22,23 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener("scroll", this.handleScroll,true);
+    window.addEventListener("scroll", this.handleScroll, true);
   },
   methods: {
     handleScroll(e) {
-      let scrollTop = e.target.scrollTop; 
+      let scrollTop = e.target.scrollTop;
       // console.log(scrollTop,this.lastScrollTop)
-      if (scrollTop > this.lastScrollTop) {
-        this.headerHidden = true
+      if (scrollTop > 100) {
+        if (scrollTop > this.lastScrollTop) {
+          this.headerHidden = true
+        } else {
+          this.headerHidden = false
+        }
+        this.lastScrollTop = scrollTop;
       } else {
         this.headerHidden = false
       }
-      this.lastScrollTop = scrollTop;
+
     },
   },
   watch: {
@@ -82,6 +87,7 @@ export default {
     opacity: 0;
   }
 }
+
 .header--show {
   animation-name: fadeShow;
   animation-fill-mode: forwards;
