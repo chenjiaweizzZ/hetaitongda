@@ -17,6 +17,12 @@ import contentAA from './components/contentAA.vue'
   </script>
   <style scoped>
   .school {
-    margin-top: 120px;
+    padding-top: 120px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: scroll;
   }
   </style>
